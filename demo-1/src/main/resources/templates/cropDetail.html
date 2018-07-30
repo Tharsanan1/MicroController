@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Person List</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Reading List</h1>
+      <br/><br/>
+      <div>
+         <table border="1">
+            <tr>
+            	<th>Date</th>
+            	<th>Time</th>
+            	<th>Place</th>
+               <th>Temp</th>
+               <th>Humidity</th>
+               <th>Moisure</th>
+               
+            </tr>
+            <tr th:each ="model : ${models}">
+               <td th:utext="${model.date}">...</td>
+               <td th:utext="${model.time}">...</td>
+               <td th:utext="${model.place}">...</td>
+               <td th:utext="${model.temperature}">...</td>
+               <td th:utext="${model.humidity}">...</td>
+               <td th:utext="${model.moisure}">...</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>
